@@ -1,0 +1,17 @@
+name: Surge Deploy
+on: 
+  push:
+    branches:
+      main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to fearless-development.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'fearless-development.surge.sh'
+          project: '.'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
+      - run: echo "🚀 Deployment script finished."
