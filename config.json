@@ -1,0 +1,424 @@
+{
+    "title": "Feature Gallery",
+    "source": "https://services7.arcgis.com/b6K13qSICJnvAnes/ArcGIS/rest/services/service_cf54796fa94343dda7ce1d3797959532/FeatureServer/0",
+    "analytics": {
+        "service": "https://services2.arcgis.com/hUPR9iC6qnMcwWsa/arcgis/rest/services/Gallery_App_Analytics_Layer/FeatureServer/0",
+        "interval": 5000
+    },
+    "filterValuesSource": null,
+    "userFilters": [
+        {
+            "name": "DRR_tags",
+            "label": "DRR",
+            "separator": ",",
+            "values": [
+                {
+                    "value": null,
+                    "label": "<b>Prevention</b>",
+                    "selectable": false
+                },
+                {
+                    "value": "prevention_assess_hazards",
+                    "label": "Assess Hazards",
+                    "selectable": true
+                },
+                {
+                    "value": "prevention_assess_exposure_vuln",
+                    "label": "Assess Exposure Vulnerability",
+                    "selectable": true
+                },
+                {
+                    "value": "prevention_predict_impact",
+                    "label": "Predict Impact",
+                    "selectable": true
+                },
+                {
+                    "value": "prevention_reduce_risk",
+                    "label": "Reduce Risk",
+                    "selectable": true
+                },
+                {
+                    "value": null,
+                    "label": "<b>Preparedness</b>",
+                    "selectable": false
+                },
+                {
+                    "value": "preparedness_monitor_hazards",
+                    "label": "Monitor Hazards",
+                    "selectable": true
+                },
+                {
+                    "value": "preparedness_forecast",
+                    "label": "Forecast",
+                    "selectable": true
+                },
+                {
+                    "value": "preparedness_design_response",
+                    "label": "Design Response",
+                    "selectable": true
+                },
+                {
+                    "value": "preparedness_mobilise_preposition",
+                    "label": "Mobilise Preposition",
+                    "selectable": true
+                },
+                {
+                    "value": "preparedness_alert",
+                    "label": "Alert",
+                    "selectable": true
+                },
+                {
+                    "value": null,
+                    "label": "<b>Response</b>",
+                    "selectable": false
+                },
+                {
+                    "value": "response_register_coordinate_responders",
+                    "label": "Register Coordinate Responders",
+                    "selectable": true
+                },
+                {
+                    "value": "response_assess_damage_impact",
+                    "label": "Assess Damage Impact",
+                    "selectable": true
+                },
+                {
+                    "value": "response_assess_needs_priorities",
+                    "label": "Assess Needs Priorities",
+                    "selectable": true
+                },
+                {
+                    "value": "response_register_pin",
+                    "label": "Register Pin",
+                    "selectable": true
+                },
+                {
+                    "value": "response_assign_dispatch_resources",
+                    "label": "Assign Dispatch Resources",
+                    "selectable": true
+                },
+                {
+                    "value": "response_monitor_resource-distribution",
+                    "label": "Monitor Resource-distribution",
+                    "selectable": true
+                },
+                {
+                    "value": "response_situational_awareness",
+                    "label": "Situational Awareness",
+                    "selectable": true
+                },
+                {
+                    "value": null,
+                    "label": "<b>Recovery</b>",
+                    "selectable": false
+                },
+                {
+                    "value": "recovery_remove_debris",
+                    "label": "Remove Debris",
+                    "selectable": true
+                },
+                {
+                    "value": "recovery_prioritise_plan_reconstruction",
+                    "label": "Prioritise Plan Reconstruction",
+                    "selectable": true
+                },
+                {
+                    "value": "recovery_monitor_progress",
+                    "label": "Monitor Progress",
+                    "selectable": true
+                }
+            ]
+        },
+        {
+            "name": "Prgrm_tags",
+            "label": "Program",
+            "separator": ",",
+            "values": [
+                {
+                    "value": "camp_management",
+                    "label": "Camp Management",
+                    "selectable": true
+                },
+                {
+                    "value": "cash_voucher",
+                    "label": "Cash Voucher",
+                    "selectable": true
+                },
+                {
+                    "value": "child_protection",
+                    "label": "Child Protection",
+                    "selectable": true
+                },
+                {
+                    "value": "coordination_em",
+                    "label": "Coordination Em",
+                    "selectable": true
+                },
+                {
+                    "value": "education",
+                    "label": "Education",
+                    "selectable": true
+                },
+                {
+                    "value": "emergency_telecom",
+                    "label": "Emergency Telecom",
+                    "selectable": true
+                },
+                {
+                    "value": "family_tracing_reunification",
+                    "label": "Family Tracing Reunification",
+                    "selectable": true
+                },
+                {
+                    "value": "food_sec_livelihoods",
+                    "label": "Food Sec Livelihoods",
+                    "selectable": true
+                },
+                {
+                    "value": "health",
+                    "label": "Health",
+                    "selectable": true
+                },
+                {
+                    "value": "logistics",
+                    "label": "Logistics",
+                    "selectable": true
+                },
+                {
+                    "value": "mental_health_psycho_support",
+                    "label": "Mental Health Psycho Support",
+                    "selectable": true
+                },
+                {
+                    "value": "mine_action",
+                    "label": "Mine Action",
+                    "selectable": true
+                },
+                {
+                    "value": "nutrition",
+                    "label": "Nutrition",
+                    "selectable": true
+                },
+                {
+                    "value": "peace_stabilisation",
+                    "label": "Peace Stabilisation",
+                    "selectable": true
+                },
+                {
+                    "value": "protection",
+                    "label": "Protection",
+                    "selectable": true
+                },
+                {
+                    "value": "SAR",
+                    "label": "Sar",
+                    "selectable": true
+                },
+                {
+                    "value": "shelter",
+                    "label": "Shelter",
+                    "selectable": true
+                },
+                {
+                    "value": "WASH",
+                    "label": "Wash",
+                    "selectable": true
+                }
+            ]
+        },
+        {
+            "name": "IM_tags",
+            "label": "IM",
+            "separator": ",",
+            "values": [
+                {
+                    "value": "data_collection",
+                    "label": "Data Collection",
+                    "selectable": true
+                },
+                {
+                    "value": "data_processing",
+                    "label": "Data Processing",
+                    "selectable": true
+                },
+                {
+                    "value": "analytics",
+                    "label": "Analytics",
+                    "selectable": true
+                },
+                {
+                    "value": "map_viz",
+                    "label": "Map Viz",
+                    "selectable": true
+                },
+                {
+                    "value": "reporting",
+                    "label": "Reporting",
+                    "selectable": true
+                },
+                {
+                    "value": "collaboration_engagement",
+                    "label": "Collaboration Engagement",
+                    "selectable": true
+                }
+            ]
+        },
+        {
+            "name": "Tech_tags",
+            "label": "Technology",
+            "separator": ",",
+            "values": [
+                {
+                    "value": "3D_analysis",
+                    "label": "3d Analysis",
+                    "selectable": true
+                },
+                {
+                    "value": "dashboards_bi",
+                    "label": "Dashboards Bi",
+                    "selectable": true
+                },
+                {
+                    "value": "drone",
+                    "label": "Drone",
+                    "selectable": true
+                },
+                {
+                    "value": "field_apps",
+                    "label": "Field Apps",
+                    "selectable": true
+                },
+                {
+                    "value": "geoAI",
+                    "label": "Geoai",
+                    "selectable": true
+                },
+                {
+                    "value": "geoanalysis",
+                    "label": "Geoanalysis",
+                    "selectable": true
+                },
+                {
+                    "value": "geodesign",
+                    "label": "Geodesign",
+                    "selectable": true
+                },
+                {
+                    "value": "hubs_portal",
+                    "label": "Hubs Portal",
+                    "selectable": true
+                },
+                {
+                    "value": "image_analysis",
+                    "label": "Image Analysis",
+                    "selectable": true
+                },
+                {
+                    "value": "notebooks",
+                    "label": "Notebooks",
+                    "selectable": true
+                },
+                {
+                    "value": "routing_networks",
+                    "label": "Routing Networks",
+                    "selectable": true
+                },
+                {
+                    "value": "storymaps",
+                    "label": "Storymaps",
+                    "selectable": true
+                },
+                {
+                    "value": "webapps",
+                    "label": "Webapps",
+                    "selectable": true
+                }
+            ]
+        }
+    ],
+    "appliedFilters": [
+        {
+            "field": "status",
+            "values": ["active"]
+        }
+    ],
+    "item": {
+        "name": "name",
+        "url": "url",
+        "description": "description",
+        "thumbnail": {
+            "display": true,
+            "type": "attachment"
+        },
+        "back": {
+            "display": true,
+            "title": "Information",
+            "fields": [
+                {
+                    "name": "name",
+                    "label": "Title",
+                    "valueLabels": {
+                        "Lebanese Red Cross use location intelligence to deliver aid and build trust": "Lebanese Red Cross Solution"
+                    }
+                },
+                {
+                    "name": "Tech_tags",
+                    "label": "Technology",
+                    "valueLabels": {
+                        "3D_analysis": "3D Analysis",
+                        "dashboards_bi": "Dashboards BI",
+                        "drone": "Drone",
+                        "field_apps": "Field Apps",
+                        "geoAI": "GeoAI",
+                        "geodesign": "Geodesign",
+                        "hubs_portal": "Hubs Portal",
+                        "image_analysis": "Image Analysis",
+                        "notebooks": "Notebooks",
+                        "routing_networks": "Routing Networks",
+                        "storymaps": "StoryMaps",
+                        "webapps": "Web Applications"
+                    }
+                },
+                {
+                    "name": "DRR_tags",
+                    "label": "DRR"
+                },
+                {
+                    "name": "IM_tags",
+                    "label": "IM"
+                }
+            ]
+        }
+    },
+    "map": {
+        "display": true,
+        "basemap": "topo-vector",
+        "center": [0, 0],
+        "zoom": 1,
+        "showZoomButtons": false,
+        "locationSymbol": {
+            "type": "simple-marker",
+            "style": "square",
+            "color": "blue",
+            "size": "8px",
+            "outline": {
+                "color": [255, 255, 0],
+                "width": 3
+            }
+        },
+        "selectedLocationSymbol": {
+            "type": "simple-marker",
+            "style": "square",
+            "color": "red",
+            "size": "8px",
+            "outline": {
+                "color": [255, 0, 0],
+                "width": 3
+            }
+        }
+    },
+    "descMax": 75,
+    "itemsPerRow": 3,
+    "mobileItemsPerRow": 2,
+    "darkMode": false
+}

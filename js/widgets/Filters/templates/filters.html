@@ -1,0 +1,48 @@
+<div class="filters">
+    <div class="searchandtoggle-container">
+        <div class="search-container">
+            <div class="search">
+                <div class="searchbar-container">
+                    <div class="input-group">
+                        <input
+                            class="searchbar"
+                            type="text"
+                            autocomplete="off"
+                            placeholder="Search and Filter Datasets"
+                            value=""
+                            id="searchbarinput"
+                            data-dojo-attach-point="searchbarInput"
+                        />
+                    </div>
+                    <div
+                        class="clear-btn hidden"
+                        data-dojo-attach-point="clearBtn"
+                    >
+                        <span class="esri-icon-close"></span>
+                    </div>
+                </div>
+                <div
+                    class="autocomplete-options-container hidden"
+                    data-dojo-attach-point="autocompleteOptionsContainer"
+                >
+                    <div class="autocomplete-options-list" data-dojo-attach-point="autocompleteList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="filter-toggler" data-dojo-attach-point="filterToggler">
+            <span class="esri-icon-up-arrow"></span>
+        </div>
+    </div>
+    <div
+        class="categories-container"
+        data-dojo-attach-point="categoriesContainer"
+    ></div>
+    <div class="map-container hidden" data-dojo-attach-point="mapContainer">
+        Location
+        <div id="mapViewDiv"></div>
+    </div>
+    <div class="filter-gallery hidden" data-dojo-attach-point="filterGallery">
+        <span class="clear-all-btn" data-dojo-attach-point="clearAllBtn">Clear All</a>
+    </div>
+</div>

@@ -1,0 +1,678 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
+body.darkMode {
+    color: white;
+}
+
+body,
+input {
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    font-family: Avenir Next W01, Avenir Next W00, Avenir Next, Avenir,
+        Helvetica Neue, sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.root-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    place-content: stretch flex-start;
+    align-items: stretch;
+}
+
+.drawer {
+    background: white;
+    box-sizing: border-box;
+    overflow-y: auto;
+    box-shadow: rgb(0 0 0 / 24%) 0px 2px 6px;
+    position: relative;
+    overflow: inherit;
+    transition: all 1s;
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+}
+
+body.darkMode .drawer {
+    background: #2d2d2d;
+}
+
+.drawer .contentcontainer {
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body.darkMode .drawer .contentcontainer {
+    background: #2d2d2d;
+}
+
+.drawer.closed {
+    width: 0px;
+    padding: 0px;
+    overflow: inherit;
+}
+
+.drawer.closed .contentcontainer {
+    display: none;
+}
+
+.drawer .handle {
+    position: absolute;
+    top: 150px;
+    right: -25px;
+    width: 25px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: rgb(0 0 0 / 24%) 0px 2px 6px;
+    z-index: 5;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transform: scale(-1, 1);
+}
+
+.drawer.closed .handle {
+    transform: scale(1, 1);
+}
+
+.app-container {
+    position: relative;
+    flex-grow: 1;
+}
+
+body.darkMode .app-container {
+    background: #363636;
+}
+
+.gallery-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    max-height: 100vh;
+}
+
+.gallery-container.hidden {
+    display: none;
+}
+
+.searchandtoggle-container {
+    display: flex;
+    border: 2px solid rgb(239, 239, 239);
+    box-sizing: border-box;
+}
+
+body.darkMode .searchandtoggle-container {
+    border: 2px solid black;
+}
+
+.search-container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding-left: 0.5rem;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+}
+
+.searchbar-container {
+    position: relative;
+    display: flex;
+}
+
+.input-group {
+    flex-grow: 1;
+    margin-top: 0;
+    display: table;
+}
+
+.searchbar {
+    border-bottom-color: transparent;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzZlNmU2ZSI+PHBhdGggZD0iTTE0LjY1IDEzLjc0TDkuNzMyIDguODIzQTUuMzg3IDUuMzg3IDAgMTA1LjUgMTAuOTA0YTUuMzU4IDUuMzU4IDAgMDAzLjI4OC0xLjE0Mmw0LjkyIDQuOTJ6TTUuNSA5LjI1YTMuNzUgMy43NSAwIDExMy43NS0zLjc1MSAzLjc1MiAzLjc1MiAwIDAxLTMuNzUgMy43NXoiLz48L3N2Zz4=);
+    background-size: 1.06667em;
+    background-position: 0.25em;
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
+    height: 2.75rem;
+    display: table-cell;
+    position: relative;
+    margin-top: 0;
+    width: calc(100% - 2em);
+    vertical-align: middle;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    box-shadow: none;
+    outline: none;
+}
+
+body.darkMode .searchbar {
+    color: white;
+}
+
+.searchbar:focus {
+    border-bottom-color: #999;
+    box-shadow: none;
+}
+
+.clear-btn {
+    padding: 0 0.35rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    color: red;
+}
+
+body.darkMode .clear-btn {
+    background: #363636;
+}
+
+.clear-btn.hidden {
+    display: none;
+}
+
+.autocomplete-options-container {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0;
+    border: 1px solid #efefef;
+    border-top: none;
+    width: 100%;
+    z-index: 20;
+    background-color: #fff;
+    box-shadow: 0 0 16px 0 rgb(0 0 0 / 5%);
+}
+
+body.darkMode .autocomplete-options-container {
+    background: #363636;
+    border: 1px solid black;
+}
+
+.autocomplete-options-container.hidden {
+    display: none;
+}
+
+.autocomplete-options-list {
+    width: 100%;
+}
+
+.autocomplete-option {
+    display: flex;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.autocomplete-option:hover {
+    background: aliceblue;
+}
+
+body.darkMode .autocomplete-option:hover {
+    background: black;
+}
+
+.filter-toggler {
+    width: 50px;
+    border-left: 1px solid rgb(239, 239, 239);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #0079c1;
+}
+
+body.darkMode .filter-toggler {
+    border-left: 1px solid black;
+}
+
+.filter-toggler.hidden {
+    display: none;
+}
+
+.filter-toggler.rotated span {
+    transform: scale(1, -1);
+}
+
+.categories-container {
+    display: block;
+    width: 100%;
+}
+
+.categories-container.hidden {
+    display: none;
+}
+
+.categories-list {
+    border-width: 1px 1px 0px;
+    border-style: solid;
+    border-color: rgb(239, 239, 239);
+    border-image: initial;
+}
+
+body.darkMode .categories-list {
+    border-color: black;
+}
+
+.category-item-container {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgb(239, 239, 239);
+}
+
+body.darkMode .category-item-container {
+    border-bottom: 1px solid black;
+}
+
+.category-item {
+    cursor: pointer;
+    display: flex;
+}
+
+.category-item .title {
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 0.9375rem;
+}
+
+.category-item .icon.rotated {
+    transform: scale(1, -1);
+}
+
+.subcategory-container {
+    padding: 0.25rem 0px;
+}
+
+.subcategory-container.hidden {
+    display: none;
+}
+
+.subcategory-item {
+    font-size: 14px;
+}
+
+.subcategory-item input[type="checkbox"].hidden {
+    display: none;
+}
+
+.subcategory-item label {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    mix-blend-mode: luminosity;
+    -webkit-border-radius: 0px;
+}
+
+body.darkMode input[type="checkbox"] {
+    mix-blend-mode: initial;
+    -webkit-border-radius: 0px;
+}
+
+.filter-gallery {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-gallery.hidden {
+    display: none;
+}
+
+.filter-badge {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0.35rem;
+    background: rgb(204, 204, 204);
+    border-radius: 10px;
+    border: 1px solid rgba(149, 149, 149, 0.5);
+    font-size: 0.8125rem;
+    color: rgb(76, 76, 76);
+}
+
+.filter-badge .icon {
+    margin-left: 0.2rem;
+    cursor: pointer;
+}
+
+.clear-all-btn {
+    cursor: pointer;
+    text-decoration: none;
+    color: #0079c1;
+    font-size: 0.8125rem;
+    margin-left: 0.375rem;
+}
+
+.clear-all-btn:hover {
+    text-decoration: underline;
+}
+
+.gallery-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.gallery-container .gallery-title {
+    cursor: default;
+}
+
+.gallery-title .title-rule {
+    height: 1px;
+    background: rgb(204, 204, 204);
+    flex-grow: 2;
+    margin-left: 0.75rem;
+}
+
+.results-gallery-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.results-gallery-container .esri-icon-minus,
+.results-gallery-container .esri-icon-plus {
+    margin-top: 5px;
+    color: rgb(204, 204, 204);
+}
+
+.results-gallery {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.results-gallery.hidden {
+    display: none;
+}
+
+.gallery-container .results-gallery-container {
+    margin-left: 0.75rem;
+    max-height: 100%;
+    max-width: calc(100% - 1.75rem);
+}
+
+.gallery-container .result-card {
+    width: calc(33% - 1.5rem);
+}
+
+body.darkMode .gallery-container .result-card .flip-card-inner {
+    background: #232323;
+}
+
+.flip-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.flip-icon.hidden {
+    display: none;
+}
+
+body.darkMode .flip-icon-back {
+    background-color: #363636;
+}
+
+.flip-icon-back {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+body.darkMode .flip-icon-front {
+    background-color: #232323;
+}
+
+.flip-icon-front {
+    background-color: #F1F1F1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    box-shadow: -50px 50px 71px 104px darkgrey;
+}
+
+.flip-card {
+    perspective: 1000px;
+    background-color: transparent;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    background: #F1F1F1;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card.flipped .flip-icon {
+    z-index: unset;
+}
+
+.flip-card .flip-card-front {
+    display: block;
+    transform: rotateY(0deg);
+}
+
+.flip-card .flip-card-back {
+    display: none;
+}
+
+.flip-card.flipped .flip-card-front {
+    display: none;
+}
+
+.flip-card.flipped .flip-card-back {
+    display: block;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back .title {
+    margin-left: 30px;
+    padding: 10px;
+    min-height: 10px;
+}
+
+.flip-card-back .info-container {
+    max-height: 100%;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px;
+}
+
+.attribute-table {
+    max-width: 100%;
+    display: table;
+    overflow-x: auto;
+}
+
+.att-table-row {
+    display: table-row;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+body.darkMode .field-title, body.darkMode .field-value {
+    border-color: white;
+}
+
+.field-title, .field-value {
+    display: table-cell;
+    max-width: 50%;
+    overflow: auto;
+    border: 1px solid;
+    border-color: black;
+    padding: 5px;
+}
+
+.result-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 1.5rem);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 0;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    margin-bottom: 0.75rem;
+}
+
+.card-image-wrap {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    flex: 0 0 auto;
+    margin: 0 0 1rem 0;
+    display: block;
+    -webkit-box-direction: normal;
+}
+
+.card-image {
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    word-wrap: break-word;
+    padding-top: 0px;
+}
+
+.result-card .card-content .title {
+    margin-bottom: 0.375rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+body.darkMode .result-card .card-content .title a {
+    color: #ffbb03;
+}
+
+.result-card .card-content .title a {
+    color: #0079c1;
+    text-decoration: none;
+}
+
+.map-container {
+    height: 400px;
+    margin: 1rem 0rem 2rem 0rem;
+    font-weight: 700;
+    font-size: 0.9375rem;
+}
+
+.map-container.hidden {
+    display: none;
+}
+
+.map-container > div:first-child {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 640px) {
+    .root-container {
+        flex-flow: column-reverse nowrap;
+    }
+
+    .drawer {
+        width: 100%;
+        z-index: 2;
+        padding-top: calc(45px);
+        height: 100%;
+    }
+
+    .drawer.closed {
+        height: 0%;
+        width: 100%;
+    }
+
+    .drawer .handle {
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+    }
+
+    .drawer .handle .content {
+        transform: rotate(90deg);
+    }
+
+    .drawer.closed .handle {
+        top: -45px;
+    }
+
+    .drawer.closed .handle .content {
+        transform: rotate(270deg);
+    }
+
+    .gallery-container {
+        bottom: 45px !important;
+    }
+
+    .gallery-container .results-gallery-container {
+        margin-left: 0.75rem;
+        max-height: 100%;
+        max-width: calc(100% - 1.75rem);
+    }
+
+    .gallery-container .result-card {
+        width: calc(50% - 1.5rem);
+    }
+
+    .result-card .card-content .interaction-container {
+        flex-flow: column;
+    }
+
+    .result-card .card-content .interaction-container .btn {
+        width: 100%;
+        margin: 0.1rem 0px;
+    }
+}
